@@ -1,5 +1,7 @@
 # README
 
+This is a web app which finds restaurants within two kilometers of your location using your search keywords. It pulls restaurants based on their distance, rating, and demographic of their typical visitor. The app goal is to focus on the individual's wants and experience.
+
 ##  restaurants table
 
 |Column|Type|Options|
