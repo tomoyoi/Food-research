@@ -4,7 +4,8 @@
     %img{class: "icon"}
     .desc
       .upper
-        .user_name Tomoyo
+        .user_name 
+          = current_user.name
         %button{type: "button"} 編集
       .lower
         .user_desc こんにちは！東京のレストランに関して情報をアップしていきます。よろしくお願いします♩

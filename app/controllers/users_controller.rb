@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   end
   
   def create
-    @rating = Rating.new
     Rating.create(create_parmas)
     render action: :show
   end

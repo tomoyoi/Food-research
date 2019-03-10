@@ -4,7 +4,8 @@
     %img{class: "icon"}
     .desc
       .upper
-        .user_name Tomoyo
+        .user_name 
+          = current_user.name
         %button{type: "button"} 編集
       .lower
         .user_desc こんにちは！東京のレストランに関して情報をアップしていきます。よろしくお願いします♩
@@ -14,21 +15,21 @@
       %img
       %img
       %img
-    = form_for @rating, :url => {:action => :show} do |f|
+    = form_for @rating, :url => {:action => :create} do |f|
       #star
-        = f.label :overall, class: :overall
+        = f.label :overall, class: "overall"
         = f.hidden_field :overall
       .star
-        = f.label :food, class: :rates
-        = f.hidden_field :taste
+        = f.label :food, class: "rates"
+        = f.hidden_field :taste 
       .star
-        = f.label :service, class: :rates
+        = f.label :service, class: "rates"
         = f.hidden_field :service
       .star
-        = f.label :atmosphere, class: :rates
+        = f.label :atmosphere, class: "rates"
         = f.hidden_field :atmosphere
       .star
-        = f.label :price, class: :rates
+        = f.label :price, class: "rates"
         = f.hidden_field :price
     .rest_desc 店員さんはフレンドリーで話していていい気分になりました。食後には美味しいコーヒーもついてきて満足でした！
   .footer
