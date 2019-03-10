@@ -1,21 +1,34 @@
 .header Food Research
 .body
-  %img
   .profile
-    .upper
-      .user_name Tomoyo
-      %button{type: "button"} プロフィールを編集
-    .lower
-      .user_desc こんにちは！レストランに関して情報をアップしていきます。
-  .images
-    %tr
-      %th
-    %tr
-      %th
-    %tr
-      %th
-    %tr
-      %th 
-  .rates
-  .image_desc
-.footer
+    %img{class: "icon"}
+    .desc
+      .upper
+        .user_name Tomoyo
+        %button{type: "button"} 編集
+      .lower
+        .user_desc こんにちは！東京のレストランに関して情報をアップしていきます。よろしくお願いします♩
+    .images
+      %img
+      %img
+      %img
+      %img
+      %img
+    #star
+    = form_for @rating, :url => {:action => :show} do |f|
+      .wrap
+        = f.label :overall
+        = f.hidden_field :overall, id: :star
+      .wrap
+        = f.label :food
+        = f.hidden_field :taste, id: :star
+      .wrap
+        = f.label :service
+        = f.hidden_field :service, id: :star
+      .wrap
+        = f.label :atmosphere
+        = f.hidden_field :atmosphere, id: :star
+      .wrap
+        = f.label :price
+        = f.hidden_field :price, id: :star
+    .rest_desc 食後には美味しいコーヒーもついてきて満足でした！

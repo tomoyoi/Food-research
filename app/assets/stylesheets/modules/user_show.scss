@@ -1,11 +1,10 @@
 .body {
   width: 100%;
   height: 300px;
-   position: absolute;
   .profile {
-    position: relative;
+    text-align: center;
     left: 400px;
-    img {
+    .icon {
       border-radius: 50px;
       height: 100px;
       width: 100px;
@@ -15,7 +14,8 @@
     .desc {
       width: 400px;
       height: 50px;
-      margin: 0 0 30px 400px;
+      display: inline-block;
+      margin: 50px 0 30px 200px;
       .upper {
         display: block;
         .user_name {
@@ -24,8 +24,9 @@
           margin-right: 50px;
         }
         button {
-          width: 150px;
+          width: 80px;
           height: 30px;
+          border: 1px solid #dbdbdb;
         }
       }
       .user_desc {
@@ -33,4 +34,67 @@
       }
     }
   }
+  .images {
+    text-align: center;
+    img {
+      width: 250px;
+      height: 250px;
+      margin: 80px 10px 0 10px;
+      background: url(/food.png);
+    }
+  }
+  .wrap {
+    p {
+      display: inline-block;
+      margin: 20px 30px;
+    }
+  }
+}
+
+
+
+.star-ratings {
+  background: url("/star-off.png") repeat-x;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 80px;
+  margin: 0 auto;
+}
+.star-ratings {
+  background: url("/star-off.png") repeat-x;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 80px;
+  margin: 0 auto;
+}
+.star-ratings {
+  background: url("/star-off.png") repeat-x;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 80px;
+  margin: 0 auto;
+}
+.star-ratings {
+  background: url("/star-off.png") repeat-x;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 80px;
+  margin: 0 auto;
+}
+.star-ratings {
+  background: url("/star-off.png") repeat-x;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 80px;
+  margin: 0 auto;
 }
