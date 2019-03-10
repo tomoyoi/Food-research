@@ -42,46 +42,34 @@ $(function(){
     }
     $( function (){
       var url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
-      var params = {
-        latitude: "",
-        longitude: "",
-        range: 4,
-        hit_per_page: 20,
-        freeword: "",
-        keyid: '6316c9374757a2bd28619aa9f98a9197',
-      }
-      params.freeword = $("#key").val();
-      $(".search").val("");
-      console.log(params.freeword)
       navigator.geolocation.getCurrentPosition(successFunc)
-       function successFunc(position){
-         params.latitude = position.coords.latitude
-         params.longitude = position.coords.longitude
-         console.log(params)
-       }
-      $.getJSON( url, params, function(result){
-        for ( var i = 0; i < 20; i = i + 1 in result.rest ){
-          $("#list").append("<tr><th>" + result.rest[i].name + "</td><td>" + result.rest[i].url + "</td><td>" + result.rest[i].tel + "</td><td>" + result.rest[i].address)
-          var result = {
-            name: result.rest[i].name, 
-            url: result.rest[i].url,
-            tel: result.rest[i].tel,
-            address: result.rest[i].address,
-            image_url: result.rest[i].image_url,
-            hit_per_page: result.rest[i].hit_per_page,
+      function successFunc(position){
+        var latitude = position.coords.latitude
+        var longitude = position.coords.longitude
+        var params = {
+          latitude: latitude,
+          longitude: longitude,
+          range: 4,
+          freeword: "",
+          hit_per_page: 20,
+          keyid: '6316c9374757a2bd28619aa9f98a9197',
+        }
+        params.freeword = $("#key").val();
+        $(".search").val("")
+        $.getJSON( url, params, function(result){
+          console.log(result)
+          for ( var i = 0; i > 20; i++ in result.rest ){
+            var res = { 
+              name: result.rest[i].name,
+              access: result.rest[i].access,
+            } 
+            console.log(res)
           }     
-          console.log(result)    
-        }  
-      });      
+        }); 
+      }     
     });
   });
 });
-
-
-
-
-
-
 
 
 
