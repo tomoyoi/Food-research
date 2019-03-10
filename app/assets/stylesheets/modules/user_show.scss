@@ -1,6 +1,5 @@
 .body {
   width: 100%;
-  height: 300px;
   .profile {
     text-align: center;
     left: 400px;
@@ -8,7 +7,7 @@
       border-radius: 50px;
       height: 100px;
       width: 100px;
-      background: url(/icon.png);
+      background: url(/neko.png);
       display: inline-block;
     }
     .desc {
@@ -40,61 +39,28 @@
       width: 250px;
       height: 250px;
       margin: 80px 10px 0 10px;
-      background: url(/food.png);
+      background: url(/plate.png);
     }
   }
-  .wrap {
-    p {
-      display: inline-block;
-      margin: 20px 30px;
+  #star {
+    margin: 30px;
+    .overall {
+      font-size: 20px;
+      padding-right: 20px;
+    }
+  }
+  .star {
+    display: inline-block;
+    margin: 20px 30px;
+    .rates {
+      padding-right: 20px;
     }
   }
 }
-
-
-
-.star-ratings {
-  background: url("/star-off.png") repeat-x;
-  height: 21px;
-  line-height: 0;
-  overflow: hidden;
-  text-indent: -999em;
-  width: 80px;
-  margin: 0 auto;
+.rest_desc {
+  margin: 30px 30px;
 }
-.star-ratings {
-  background: url("/star-off.png") repeat-x;
-  height: 21px;
-  line-height: 0;
-  overflow: hidden;
-  text-indent: -999em;
-  width: 80px;
-  margin: 0 auto;
-}
-.star-ratings {
-  background: url("/star-off.png") repeat-x;
-  height: 21px;
-  line-height: 0;
-  overflow: hidden;
-  text-indent: -999em;
-  width: 80px;
-  margin: 0 auto;
-}
-.star-ratings {
-  background: url("/star-off.png") repeat-x;
-  height: 21px;
-  line-height: 0;
-  overflow: hidden;
-  text-indent: -999em;
-  width: 80px;
-  margin: 0 auto;
-}
-.star-ratings {
-  background: url("/star-off.png") repeat-x;
-  height: 21px;
-  line-height: 0;
-  overflow: hidden;
-  text-indent: -999em;
-  width: 80px;
-  margin: 0 auto;
+.footer {
+  height: 100px;
+  width: 100%;
 }
