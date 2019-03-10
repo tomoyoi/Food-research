@@ -1,22 +1,25 @@
 .header Food Research
 .body
   .profile
-    %img
+    %img{class: "icon"}
     .desc
       .upper
-        .user_name Tomoyo
-        %button{type: "button"} プロフィールを編集
+        .user_name 
+          = current_user.name
+        %button{type: "button"} 編集
       .lower
-        .user_desc こんにちは！レストランに関して情報をアップしていきます。
+        .user_desc こんにちは！東京のレストランに関して情報をアップしていきます。よろしくお願いします♩
   .images
-    %tr
-      %th
-    %tr
-      %th
-    %tr
-      %th
-    %tr
-      %th    
+    %img
+    %img
+    %img
+    %img 
+    %img
+    %img
+    %img
+    %img 
+    %img 
+    %img     
 .footer
 
 

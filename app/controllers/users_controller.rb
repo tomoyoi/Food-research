@@ -4,8 +4,14 @@ class UsersController < ApplicationController
   end
 
   def show
+    @rating = Rating.new
   end
   
+  def create
+    Rating.create(create_parmas)
+    render action: :show
+  end
+
   def edit
   end
 
@@ -21,5 +27,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email)
+  end
+
+  def create_params
+    params.require(:rating).permit(:price, :taste, :service, :atmosphere, :overall)
   end
 end
