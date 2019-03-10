@@ -1,8 +1,11 @@
 .header FOOD RESEARCH
 .body
   %form 
-    %input{type: "text", class: "search"}
-    %input{type: "submit", class: "submit-button", value: "Search"}
-  .currentLocation
-    %input{type: "submit", value: " 現在地から探す"}
-.footer
+    %input{type: "text", id: "key", placeholder: "KEYWORD", class: "search"}
+    %input{type: "button", id: "submit", class: "submit-button", value: "SEARCH", class: "currentLocation"}
+    %table#list
+      %ul
+        %li 店舗名
+        %li URL
+        %li 電話番号
+        %li 住所
