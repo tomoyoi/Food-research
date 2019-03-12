@@ -59,8 +59,8 @@ $(function(){
         $.getJSON( url, params, function(result){
             console.log(result.rest[ i ] )
             for ( var i in result.rest ) {
-              $("#list").append("<tr><td>" + result.rest[ i ].name + "</td><td>" + result.rest[ i ].url + "</td><td>" + result.rest[ i ].tel + "</td><td>" + result.rest[ i ].address + "</td><td>" + result.rest[ i ].budget + "yen"  )  
-          }   
+              $("#list").append("<tr><td>" + result.rest[ i ].name + "</td><td>" + result.rest[ i ].url + "</td><td>" + result.rest[ i ].tel + "</td><td>" + result.rest[ i ].address + "</td><td>" + result.rest[ i ].budget + " yen")  
+            }   
         }); 
       }     
     });
