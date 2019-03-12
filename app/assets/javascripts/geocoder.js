@@ -57,12 +57,10 @@ $(function(){
         params.freeword = $("#key").val();
         $(".search").val("")
         $.getJSON( url, params, function(result){
-          console.log(result)
-          for ( var i = 0; i > 20; i++ ){
+            console.log(result.rest[ i ] )
             for ( var i in result.rest ) {
-              $("#list").append("<tr><td>" + result.rest[ i ].name + "</td><td>" + result.rest[ i ].url + "</td><td>" + result.rest[ i ].tel + "</td><td>" + result.rest[ i ].address ) 
-            }  
-          }   
+              $("#list").append("<tr><td>" + result.rest[ i ].name + "</td><td>" + result.rest[ i ].url + "</td><td>" + result.rest[ i ].tel + "</td><td>" + result.rest[ i ].address + "</td><td>" + result.rest[ i ].budget + " yen")  
+            }   
         }); 
       }     
     });
