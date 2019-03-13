@@ -56,18 +56,27 @@ $(function(){
         }
         params.freeword = $("#key").val();
         $(".search").val("")
-        $.getJSON( url, params, function(result){
-            console.log(result.rest[ i ] )
-            for ( var i in result.rest ) {
-              $("#list").append("<tr><td>" + result.rest[ i ].name + "</td><td>" + result.rest[ i ].url + "</td><td>" + result.rest[ i ].tel + "</td><td>" + result.rest[ i ].address + "</td><td>" + result.rest[ i ].budget + " yen")  
-            }   
+        $.getJSON( url, params, function(result){ 
+          for ( var i in result.rest ) {
+          var restaurant = $("#list")
+          var html = 
+                  `
+                  <div class="restaurant-box">
+                    <a href=${ result.rest[ i ].url }><img scr=${ result.rest[ i ].image_url }, alt="img", class="rest-img"></img></a>
+                    <ul>
+                      <li class="rest-name"> ${ result.rest[ i ].name }</li>
+                      <li class="rest-budget"> Budget: ${ result.rest[ i ].budget }yen</li>
+                      <li class="rest-address"> Address: ${ result.rest[ i ].address }</li>
+                    </ul>
+                  </div>
+                  `           
+          restaurant.append(html);
+          }
         }); 
       }     
     });
   });
 });
-
-
 
 
 
