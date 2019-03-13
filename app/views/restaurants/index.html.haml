@@ -3,11 +3,11 @@
   %form 
     %input{type: "text", id: "key", placeholder: "KEYWORD", class: "search"}
     %input{type: "button", id: "submit", class: "submit-button", value: "SEARCH", class: "currentLocation"}
-    %table#list
-      .restaurant-box
-      / 　=link_to 
-      / %img
-      / %ul
-      /   %li.name Name
-      /   %li.budget Budget
-      /   %li.address Address
+    #list
+      .restaurant-box 
+        / =link_to "img", "https://r.gnavi.co.jp/21ued3d60000/?ak=%2BiO8o%2BDezskPw%2FT5b92lq9Ki3nkG01w%2F7IqavvwH3Qw%3D"
+        %img
+        %ul 
+          %li.rest-name ラーメン
+          %li.rest-budget Budget: 1000yen
+          %li.rest-address Address: 東京都世田谷区池尻２−２−２
