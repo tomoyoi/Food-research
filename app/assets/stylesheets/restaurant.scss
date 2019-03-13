@@ -22,11 +22,12 @@
       border: 1px solid #ddd;
       display: inline-block;
       margin: 50px 30px 30px 30px;
-      .rest-img {
+      img {
         width: 250px;
         height: 150px;
         margin: 10px 25px;
         border: 1px solid #ddd;
+        background: url(/sample.png);
       }
       ul {
         list-style: none;

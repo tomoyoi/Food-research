@@ -62,7 +62,7 @@ $(function(){
           var html = 
                   `
                   <div class="restaurant-box">
-                    <a href=${ result.rest[ i ].url }><img scr=${ result.rest[ i ].image_url }, alt="img", class="rest-img"></img></a>
+                    <a href=${ result.rest[ i ].url }><img scr="${ result.rest[ i ].image_url.shop_image1 }"></img></a>
                     <ul>
                       <li class="rest-name"> ${ result.rest[ i ].name }</li>
                       <li class="rest-budget"> Budget: ${ result.rest[ i ].budget }yen</li>
