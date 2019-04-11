@@ -1,2 +1,0 @@
-class RestaurantComment < ApplicationRecord
-end
