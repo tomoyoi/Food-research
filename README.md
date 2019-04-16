@@ -44,6 +44,7 @@ This is a web app which finds restaurants within two kilometers of your location
 |over-all|integer|null: false|
 |restaurant_id|integer|foreign_key: true|
 |user_id|integer|foreign_key: true|
+|comment|text|
 
 ### Association
 
@@ -54,7 +55,6 @@ This is a web app which finds restaurants within two kilometers of your location
 
 |Column|Type|Options|
 |------|----|-------|
-|comment|text|
 |restaurant_id|integer|foreign_key: true|
 |user_id|integer|foreign_key: true|
 

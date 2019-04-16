@@ -1,4 +1,5 @@
 .header FOOD RESEARCH
+= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn"
 .body
   %form 
     %input{type: "text", id: "key", placeholder: "KEYWORD", class: "search"}

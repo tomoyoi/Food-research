@@ -1,141 +1,123 @@
-#account-page {
-  .account-page__inner {
-    width: 980px;
-    margin: 60px auto;
-    padding: 60px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-
-    .account-page__inner--left, .account-page__inner--right {
-      float: left;
-      width: 50%;
+.header {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
+}
+.btn {
+  width: 100px;
+  text-decoration: none;
+  float: right;
+  padding-right: 20px;
+}
+.body {
+  width: 100%;
+    .search {
+      width: 300px;
+      height: 30px;
+      margin: 0 0 100px 500px;
     }
-    &:after {
-      clear: both;
-      content: "";
-      display: block;
-    }
-  }
-
-  .account-page__header {
-    h2 {
-      margin-bottom: 10px;
-      letter-spacing: 3px;
-      font-size: 40px;
-      font-weight: 200;
-
-      &:after {
-        content: '';
-        display: block;
-        width: 60px;
-        margin-top: 5px;
-        border-bottom: 1px solid #38aef0;
-      }
-    }
-
-    h5 {
-      margin-bottom: 20px;
-      font-size: 14px;
-      font-weight: 200;
-    }
-
-    .btn {
-      margin-top: 20px;
-      color: #fff;
-      background-color: #ccc;
-      font-size: 14px;
-    }
-  }
-
-  .field {
-    margin-bottom: 10px;
-
-    .field-label {
-      padding: 10px 0;
-      letter-spacing: 1px;
-      font-size: 14px;
-      font-weight: 200;
-
-      i {
-        font-size: 11px;
-      }
-    }
-
-    .field-input {
-      input {
-        width: 100%;
-        padding: 10px;
-        letter-spacing: 1px;
-      }
-    }
-  }
-
-  .btn {
-    display: inline-block;
-    height: 50px;
-    padding: 0 30px;
-    line-height: 50px;
-    letter-spacing: 1px;
-    text-align: center;
-    border: none;
-    border-radius: 2px;
-  }
-
-  input[type='submit'] {
-    float: left;
-    margin-top: 20px;
-    color: #fff;
-    background-color: #38aef0;
-  }
-
-  .field-label {
-    .field_with_errors {
+  #list {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+    .restaurant-box {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #ddd;
       display: inline-block;
-      color: #d65f4c;
-      font-weight: 400;
+      margin: 50px 30px 30px 30px;
+      img {
+        width: 250px;
+        height: 150px;
+        margin: 10px 25px;
+        background: url(/sample.png);
+        border: 1px solid #ddd;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin: 0 0 10px 0;
+        }
+        .rest-name {
+          font-size: 16px;;
+          text-align: center;
+        }
+        .rest-budget {
+          font-size: 12px;
+          margin-left: 20px;
+        }
+        .rest-address {
+          font-size: 12px;
+          margin-left: 20px;
+        }
+      }
     }
   }
-
-  .field-input {
-    .field_with_errors {
-      position: relative;
-
-      &:after {
-        content: '';
+  .profile {
+    text-align: center;
+    left: 400px;
+    .icon {
+      border-radius: 50px;
+      height: 100px;
+      width: 100px;
+      background: url(/neko.png);
+      display: inline-block;
+    }
+    .desc {
+      width: 400px;
+      height: 50px;
+      display: inline-block;
+      margin: 50px 0 30px 200px;
+      .upper {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 5px;
-        background-color: #d65f4c;
+        .user_name {
+          font-size: 24px;
+          display: inline-block;
+          margin-right: 50px;
+        }
+        button {
+          width: 80px;
+          height: 30px;
+          border: 1px solid #dbdbdb;
+        }
       }
+      .user_desc {
+        margin-top: 30px;
+      }
+    }
+  }
+  .images {
+    text-align: center;
+    img {
+      width: 250px;
+      height: 250px;
+      margin: 80px 10px 0 10px;
+      background: url(/plate.png);
+    }
+  }
+  #star {
+    margin: 30px;
+    .overall {
+      font-size: 20px;
+      padding-right: 20px;
+    }
+  }
+  .star {
+    display: inline-block;
+    margin: 20px 30px;
+    .rates {
+      padding-right: 20px;
     }
   }
 }
-
-#error_explanation {
-  margin: 20px 0;
-  padding: 20px 30px;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-
-  h2 {
-    margin-bottom: 10px;
-    color: #d65f4c;
-    font-size: 14px;
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 17px;
-    list-style: square;
-  }
-
-  li {
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-  }
+.rest_desc {
+  margin: 30px 30px;
+}
+.footer {
+  height: 100px;
+  width: 100%;
 }
