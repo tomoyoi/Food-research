@@ -1,10 +1,5 @@
-.header FOOD RESEARCH
-= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn"
+= render  partial: "/shared/header"
 .body
-  %form 
-    %input{type: "text", id: "key", placeholder: "KEYWORD", class: "search"}
-    %input{type: "button", id: "submit", class: "submit-button", value: "SEARCH", class: "currentLocation"}
-    #list
   .profile
     %img{class: "icon"}
     .desc
@@ -14,17 +9,14 @@
         %button{type: "button"} 編集
       .lower
         .user_desc こんにちは！東京のレストランに関して情報をアップしていきます。よろしくお願いします♩
-  .images
-    %img
-    %img
-    %img
-    %img 
-    %img
-    %img
-    %img
-    %img 
-    %img 
-    %img     
-.footer
-
-
+    .images
+      %img
+      %img
+      %img
+      %img
+      %img
+      %img
+      %img
+      %img
+      %img
+      %img

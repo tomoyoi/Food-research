@@ -1,18 +1,10 @@
-.header FOOD RESEARCH
-= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn"
-.body
-  %form 
-    %input{type: "text", id: "key", placeholder: "KEYWORD", class: "search"}
-    %input{type: "button", id: "submit", class: "submit-button", value: "SEARCH", class: "currentLocation"}
-    #list
-  .container  
-    %img{class: "icon"} 
-    %input{type: "submit", value: "変更する"}
-    .wrap
-      .container__name 名前
-      %input{type: 'text', placeholder: "#{current_user.name}", class: 'container_name_edit'}
-    .wrap
-      .container__profile　自己紹介
-      %input{type: 'text', placeholder: "#{current_user.profile}", class: 'container_profile_edit'}
-        
-    
+= render  partial: "/shared/header"
+.container  
+  %img{class: "icon"} 
+  %input{type: "submit", value: "変更する"}
+  .wrap
+    .container__name 名前
+    %input{type: 'text', placeholder: "#{current_user.name}", class: 'container_name_edit'}
+  .wrap
+    .container__profile　自己紹介
+    %input{type: 'text', placeholder: "#{current_user.profile}", class: 'container_profile_edit'}

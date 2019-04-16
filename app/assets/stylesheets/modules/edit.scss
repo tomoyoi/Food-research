@@ -12,25 +12,28 @@
   }
   .wrap {
     margin: 0 auto;
+    &__name {
+      font-size: 16px;
+      display: inline-block;
+      margin: 0 20px 0 50px;
+    }
+    .container_name_edit {
+      width: 200px;
+      height: 30px;
+      margin-right: 100px;
+    }
   }
-  &__name {
-    font-size: 16px;
-    display: inline-block;
-    margin: 0 20px 0 50px;
-  }
-  .container_name_edit {
-    width: 200px;
-    height: 30px;
-    margin-right: 100px;
-  }
-  &__profile {
-    font-size: 16px;
-    display: inline-block;
-    margin: 0 20px 0 0;
-  }
-  .container_profile_edit {
-    width: 300px;
-    height: 200px;
+  .wrap {
+    margin: 0 auto;
+    &__profile {
+      font-size: 16px;
+      display: inline-block;
+      margin: 0 20px 0 ;
+    }
+    .container_profile_edit {
+      width: 300px;
+      height: 200px;
+    }
   }
 }
   
