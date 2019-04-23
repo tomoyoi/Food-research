@@ -1,0 +1,10 @@
+.profile
+  %img{class: "icon"}
+  .desc
+    .upper
+      .user_name 
+        = current_user.name
+      %button{type: "button"} 編集
+    .lower
+      .user_desc 
+        = current_user.profile

@@ -38,7 +38,7 @@ This is a web app which finds restaurants within two kilometers of your location
 
 |Column|Type|Options|
 |------|----|-------|
-|food|integer|null: false|
+|taste|integer|null: false|
 |service|integer|null: false|
 |atmosphere|integer|null: false|
 |over-all|integer|null: false|
