@@ -1,0 +1,25 @@
+.restaurant_review {
+  width: 500px;
+  height: 600px;
+  margin: 0 auto;
+  .restaurant_form {
+    width: 500px;
+    height: 600px;
+    .new_rating {
+      width: 500px;
+      height: 500px;
+      
+      .review_comment {
+        width: 400px;
+        height: 100px;
+      }
+      .star {
+        display: inline-block;
+        margin: 20px 30px;
+        .rates {
+          padding-right: 20px;
+        }
+      }
+  }
+  }
+}
