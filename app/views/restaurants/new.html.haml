@@ -2,18 +2,21 @@
 .restaurant_review
   .restaurant_name_info レストラン名 
   .restaurant_form
-    = form_for @rating, url: '/restaurants', method: :post do |f|
+    = form_for @image, url: '/restaurants', method: :post do |f|
       = f.label :image, class: "image_upload"
-      = f.file_field :image, id: :user_avatar_path
+      = f.file_field :image, id: :user_avatar_path, value: ""
       = f.hidden_field :restaurant_id, value: "2"
       = f.hidden_field :user_id, value: "#{current_user.id}"
-      = f.text_field :comment, class: 'review_comment', placeholder: 'comment for foody'
-      = f.label :food, class: "star"
-      = f.hidden_field :taste, id: "addForm_food", value: ""
-      = f.label :service, class: "star"
-      = f.hidden_field :service, id: "addForm_service", value: ""
-      = f.label :atmosphere, class: "star"
-      = f.hidden_field :atmosphere, id: "addForm_atmosphere", value: ""
-      = f.label :price, class: "star"
-      = f.hidden_field :price, id: "addForm_price", value: ""
-      = f.submit value: 'send'
+      = form_for @rating, url: '/restaurants', method: :post do |f|  
+        = f.hidden_field :restaurant_id, value: "2"
+        = f.hidden_field :user_id, value: "#{current_user.id}"
+        = f.text_field :comment, class: 'review_comment', placeholder: 'comment for foody'
+        = f.label :food, class: "star"
+        = f.hidden_field :taste, id: "addForm_food", value: ""
+        = f.label :service, class: "star"
+        = f.hidden_field :service, id: "addForm_service", value: ""
+        = f.label :atmosphere, class: "star"
+        = f.hidden_field :atmosphere, id: "addForm_atmosphere", value: ""
+        = f.label :price, class: "star"
+        = f.hidden_field :price, id: "addForm_price", value: ""
+        = f.submit value: 'send'

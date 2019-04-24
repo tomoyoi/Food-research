@@ -13,11 +13,12 @@
 }
 .body {
   width: 100%;
-    .search {
-      width: 300px;
-      height: 30px;
-      margin: 0 0 100px 500px;
-    }
+  height: 100%;
+  .search {
+    width: 300px;
+    height: 30px;
+    margin: 0 0 100px 500px;
+  }
   #list {
     width: 80%;
     height: 100%;
@@ -90,15 +91,18 @@
       }
     }
   }
-  .images_wrap {
+  .images_list {
     text-align: center;
     img {
       width: 250px;
       height: 250px;
       margin: 80px 10px 0 10px;
-      background: url(/plate.png);
+    }
+    .rest_name {
+      display: inline-block;
     }
   }
+  // star直す
   #star {
     margin: 30px;
     .overall {
