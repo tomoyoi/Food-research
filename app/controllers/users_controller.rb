@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @rating = Rating.new
+    @ratings = Rating.all
+    @images = Image.all
   end
 
   def edit
