@@ -1,0 +1,9 @@
+= render  partial: "/shared/header"
+.body
+  = render partial: "/shared/profile"
+  .images_list
+    - @images.each do |image|
+      %img{ src: image.image, alt: "image"}
+        = link_to "/restaurants/#{image.restaurant_id}", method: :get
+        .rest_name
+          = image.restaurant.name

@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190423071354) do
+ActiveRecord::Schema.define(version: 20190424023250) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "restaurant_id"
     t.integer  "user_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.text     "image",         limit: 65535
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "image",         null: false
     t.index ["restaurant_id"], name: "index_images_on_restaurant_id", using: :btree
     t.index ["user_id"], name: "index_images_on_user_id", using: :btree
   end
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20190423071354) do
     t.integer  "user_id"
     t.integer  "image_id"
     t.integer  "rating_id",               unsigned: true
+    t.string   "guruid"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
