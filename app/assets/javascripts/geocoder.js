@@ -67,6 +67,14 @@ $(function(){
                       <li class="rest-name"> ${ result.rest[ i ].name }</li>
                       <li class="rest-budget"> Budget: ${ result.rest[ i ].budget }yen</li>
                       <li class="rest-address"> Address: ${ result.rest[ i ].address }</li>
+                      <li>
+                        <button type="button"
+                                class="favorite"
+                                data-guruid=${ result.rest[ i ].id }
+                                data-name=${ result.rest[ i ].name }
+                        >お気に入り
+                        </button>
+                      </li>
                     </ul>
                   </div>
                   `           
@@ -77,6 +85,3 @@ $(function(){
     });
   });
 });
-
-
-

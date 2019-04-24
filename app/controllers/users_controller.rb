@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  protect_from_forgery except: :favorite
   def index
     @images = Image.all
   end
@@ -20,10 +20,16 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+  def favorite
+    id = current_user.id
+    guruid = params[:guruid]
+    name   = params[:name]
 
+    Restaurant.create!(user_id: id, guruid: guruid, name: name)
+  end
+
+private
   def user_params
     params.require(:user).permit(:name, :password, :email)
   end
-
 end
